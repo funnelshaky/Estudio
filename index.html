@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Nova - Arquitectura e Interiorismo</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Montserrat (para títulos) y Lato (para texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body { font-family: 'Lato', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, h4, .font-montserrat { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-gray-900 font-montserrat">Estudio Nova</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#servicios" class="text-gray-600 hover:text-gray-900 font-semibold">Servicios</a>
+                <a href="#portafolio" class="text-gray-600 hover:text-gray-900 font-semibold">Portafolio</a>
+                <a href="#contacto" class="text-gray-600 hover:text-gray-900 font-semibold">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <header id="inicio" class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80');">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative text-center text-white px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Diseñamos espacios que inspiran.</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto">Transformamos ideas en realidades tangibles, creando entornos funcionales y estéticos que mejoran la vida.</p>
+            <a href="#portafolio" class="mt-8 inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-md hover:bg-gray-200 transition-colors">
+                Ver Proyectos
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN DE SERVICIOS -->
+        <section id="servicios" class="py-20 bg-gray-50">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Nuestros Servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <i class="fas fa-building text-4xl text-gray-800 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Diseño Arquitectónico</h3>
+                        <p class="text-gray-600">Creación de proyectos residenciales y comerciales desde cero.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <i class="fas fa-couch text-4xl text-gray-800 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Interiorismo</h3>
+                        <p class="text-gray-600">Diseño de interiores que reflejan tu estilo, cuidando cada detalle.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <i class="fas fa-hammer text-4xl text-gray-800 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Remodelaciones</h3>
+                        <p class="text-gray-600">Actualizamos espacios existentes para darles una nueva vida.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <i class="fas fa-comments text-4xl text-gray-800 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Consultoría</h3>
+                        <p class="text-gray-600">Asesoramiento experto para tomar las mejores decisiones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PORTAFOLIO -->
+        <section id="portafolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Portafolio de Proyectos</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" target="_blank" class="block group" onclick="trackPortfolioClick('Residencia Moderna')">
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Proyecto Residencia Moderna" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"></div>
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" target="_blank" class="block group" onclick="trackPortfolioClick('Interior Minimalista')">
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Proyecto Interior Minimalista" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"></div>
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" target="_blank" class="block group" onclick="trackPortfolioClick('Villa de Lujo')">
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Proyecto Villa de Lujo" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contacto" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Contáctanos</h2>
+                <div class="max-w-3xl mx-auto">
+                    
+                    <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg mb-12">
+                        <h3 class="text-2xl font-bold mb-4">Hablemos de tu Proyecto</h3>
+                        <p class="text-gray-600 mb-6 max-w-lg mx-auto">¿Listo para dar el primer paso? Envíanos los detalles de tu consulta a través de WhatsApp para una atención personalizada e inmediata.</p>
+                        <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20discutir%20un%20proyecto%20de%20arquitectura."
+                           target="_blank"
+                           class="inline-block bg-green-500 text-white font-bold py-4 px-8 rounded-lg shadow-md transition-all duration-300 hover:bg-green-600 transform hover:scale-105"
+                           onclick="trackWhatsAppClick()">
+                           <i class="fab fa-whatsapp mr-3"></i>Enviar Consulta por WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Nuestra Oficina</h3>
+                        <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Av. Principal 123, Ciudad Capital</p>
+                        <p class="text-gray-600"><i class="fas fa-envelope mr-2"></i>contacto@estudionova.com</p>
+                    </div>
+
+                    <div class="h-96 rounded-lg shadow-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.933350123512!2d-77.03170992494162!3d-12.04576309146914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b5d7a22477%3A0x3344b1c34a2e58a!2sPlaza%20Mayor%20de%20Lima!5e0!3m2!1ses!2spe!4v1689886016149!5m2!1ses!2spe" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Estudio de Arquitectura e Interiorismo Nova. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE SEGUIMIENTO DE EVENTOS -->
+    <script>
+        function trackPortfolioClick(projectName) {
+            console.log(`EVENTO REGISTRADO: Clic en el portafolio - Proyecto: "${projectName}"`);
+            gtag('event', 'portfolio_click', { 'event_category': 'Portfolio', 'event_label': projectName });
+        }
+
+        function trackWhatsAppClick() {
+            console.log("EVENTO REGISTRADO: Clic en el botón de WhatsApp.");
+            gtag('event', 'whatsapp_click', {
+                'event_category': 'Contact',
+                'event_label': 'Main CTA Button'
+            });
+        }
+    </script>
+    
+    <!-- CÓDIGO DE SEGUIMIENTO REAL DE GOOGLE ANALYTICS -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5CDSYD34E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5CDSYD34E');
+    </script>
+
+</body>
+</html>
